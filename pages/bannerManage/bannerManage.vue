@@ -11,7 +11,7 @@
 				<el-input placeholder="请输入id" @input="searchData" v-model="id" clearable></el-input>
 			</view>
 			<view v-if="error">{{error.message}}</view>
-			<el-table border :data="data" width="100%" v-loading="loading">
+			<el-table border :data="data" width="100%" v-loading="loading" element-loading-text="拼命加载中..." >
 				<el-table-column label="id" prop="_id" header-align="center" align="center"></el-table-column>
 				<el-table-column label="更新时间" header-align="center" align="center">
 					<template v-slot:default='{row}'>
